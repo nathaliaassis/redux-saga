@@ -1,7 +1,7 @@
 import {
   LOGIN_REQUEST,
   LOGIN_SUCCESS,
-  LOGIN_FAILED,
+  LOGIN_FAILURE,
   LOGOUT,
 } from '../../constants';
 
@@ -23,7 +23,7 @@ function authReducer(state = INITIAL_STATE, action) {
         loading: false,
         token: action.payload
       };
-    case LOGIN_FAILED: {
+    case LOGIN_FAILURE: {
       return {
         ...state,
         loading: false,

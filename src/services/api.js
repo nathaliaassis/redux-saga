@@ -1,7 +1,9 @@
 import axios from 'axios';
 
-const api = axios.create({
+export const api = axios.create({
   baseURL: 'https://dogsapi.origamid.dev',
 });
 
-export default api;
+export const SWAPI = axios.create({
+  baseURL: 'https://swapi.dev/api/',
+})

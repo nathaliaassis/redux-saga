@@ -1,6 +1,6 @@
 import { all, call, put, takeLatest } from 'redux-saga/effects';
-import api from '../../../services/api';
-import { loginFailed, loginSuccess } from './actions';
+import { api } from '../../../services/api';
+import { loginFailure, loginSuccess } from './actions';
 import { LOGIN_REQUEST } from '../../constants'
 
 function* signIn({ payload }) {
@@ -15,7 +15,7 @@ function* signIn({ payload }) {
       yield put(loginSuccess(token));
     }
   } catch (error) {
-    yield put(loginFailed(error.response));
+    yield put(loginFailure(error.response));
   }
 }
 

@@ -1,7 +1,7 @@
 import {
   LOGIN_REQUEST,
   LOGIN_SUCCESS,
-  LOGIN_FAILED,
+  LOGIN_FAILURE,
   LOGOUT
 } from '../../constants';
 
@@ -16,8 +16,8 @@ export const loginSuccess = (payload) => ({
   type: LOGIN_SUCCESS,
   payload
 });
-export const loginFailed = (payload) => ({
-  type: LOGIN_FAILED,
+export const loginFailure = (payload) => ({
+  type: LOGIN_FAILURE,
   payload
 });
 
